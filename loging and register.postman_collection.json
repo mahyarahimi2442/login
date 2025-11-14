@@ -1,0 +1,90 @@
+{
+	"info": {
+		"_postman_id": "4d8b0d40-e342-49d0-8616-c4870ea572d2",
+		"name": "loging and register",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "42759393"
+	},
+	"item": [
+		{
+			"name": "add user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"username\": \"mahya11\",\r\n  \"fullName\": \"محیا رحیمی\",\r\n  \"email\": \"mahyarahimi855@gmail.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{base_api}}/register",
+					"host": [
+						"{{base_api}}"
+					],
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_api}}/verify?email=mahyarahimi855@gmail.com&code=230542",
+					"host": [
+						"{{base_api}}"
+					],
+					"path": [
+						"verify"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "mahyarahimi855@gmail.com"
+						},
+						{
+							"key": "code",
+							"value": "230542"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{base_api}}/login?username=f&password=f",
+					"host": [
+						"{{base_api}}"
+					],
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "username",
+							"value": "f"
+						},
+						{
+							"key": "password",
+							"value": "f"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,13 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>کد تایید</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تایید حساب</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Vazirmatn', sans-serif;
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            color: #333;
+        }
+
+        .email-container {
+            max-width: 500px;
+            margin: 40px auto;
+            background: #fff;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #6C5DD3;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            margin-bottom: 30px;
+        }
+
+        .code-box {
+            display: inline-block;
+            font-size: 24px;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff6ec7, #6c5dd3);
+            color: #fff;
+            padding: 15px 30px;
+            border-radius: 15px;
+            letter-spacing: 4px;
+            margin-bottom: 30px;
+        }
+
+        .footer {
+            font-size: 14px;
+            color: #777;
+            margin-top: 20px;
+        }
+
+        /* بک‌گراند گرافیکی نرم */
+        .email-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle at center, #d3c4f3 0%, transparent 70%);
+            z-index: 0;
+            opacity: 0.2;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
-<h2>سلام {{username}}!</h2>
-<p>کد شما برای فعال‌سازی حساب:</p>
-<h3 style="color: blue;">{{code}}</h3>
-<p>لطفا این کد را در سایت وارد کنید تا حساب شما فعال شود.</p>
+<div class="email-container">
+    <h2>سلام {{username}}!</h2>
+    <p>کد شما برای فعال‌سازی حساب:</p>
+    <div class="code-box">{{code}}</div>
+    <p>لطفا این کد را در سایت وارد کنید تا حساب شما فعال شود.</p>
+    <div class="footer">اگر شما درخواست نکرده‌اید، این ایمیل را نادیده بگیرید.</div>
+</div>
 </body>
 </html>
